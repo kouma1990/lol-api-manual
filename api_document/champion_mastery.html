@@ -1,0 +1,254 @@
+<div class="panel-group" id="sampleAccordion">
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            <span class="label label-danger">GET</span>
+            <a data-toggle="collapse" href="#sampleAccordionCollapse1">
+                 /api/lol/{region}/v1.2/champion-----
+            </a>
+        </h3>
+    </div>
+    <div id="sampleAccordionCollapse1" class="panel-collapse collapse">
+        <div class="panel-body">
+            <b>RESPONSE CLASSES</b>
+            <br><br>
+            <b>Return value: ChampionListDto</b>
+            <br><br>
+
+            <b>ChampionListDto</b> - This object contains a collection of champion information.
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>NAME</th>
+                        <th>DATA TYPE</th>
+                        <th>DESCRIPTION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>champions</td>
+                        <td>List[ChampionDto]</td>
+                        <td>The collection of champion information.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br><br>
+            <b>ChampionDto</b> - This object contains champion information.
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>NAME</th>
+                        <th>DATA TYPE</th>
+                        <th>DESCRIPTION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>rankedPlayEnabled</td>
+                        <td>boolean</td>
+                        <td>Ranked play enabled flag.</td>
+                    </tr>
+                    <tr>
+                        <td>botMmEnabled</td>
+                        <td>boolean</td>
+                        <td>Bot Match Made enabled flag (for Co-op vs. AI games).</td>
+                    </tr>
+                    <tr>
+                        <td>botEnabled</td>
+                        <td>boolean</td>
+                        <td>Bot enabled flag (for custom games).</td>
+                    </tr>
+                    <tr>
+                        <td>active</td>
+                        <td>boolean</td>
+                        <td>Indicates if the champion is active.</td>
+                    </tr>
+                    <tr>
+                        <td>freeToPlay</td>
+                        <td>boolean</td>
+                        <td>Indicates if the champion is free to play. Free to play champions are rotated periodically.</td>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>boolean</td>
+                        <td>Champion ID. For static information correlating to champion IDs, please refer to the LoL Static Data API.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br><br>
+            <b>RESPONSE ERRORS</b>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>HTTP STATUS CODE</th>
+                        <th>REASON</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>400</td>
+                        <td>Bad request</td>
+                    </tr>
+                    <tr>
+                        <td>500</td>
+                        <td>Internal server error</td>
+                    </tr>
+                    <tr>
+                        <td>429</td>
+                        <td>Rate limit exceeded</td>
+                    </tr>
+                    <tr>
+                        <td>503</td>
+                        <td>Service unavailable</td>
+                    </tr>
+                    <tr>
+                        <td>401</td>
+                        <td>Unauthorized</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br><br>
+            <b>QUERY PARAMETERS</b>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>NAME</th>
+                        <th>VALUE</th>
+                        <th>DATA TYPE</th>
+                        <th>DESCRIPTION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>freeToPlay (optional)</td>
+                        <td></td>
+                        <td>boolean</td>
+                        <td>Optional filter param to retrieve only free to play champions.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            <span class="label label-danger">GET</span>
+            <a data-toggle="collapse" href="#sampleAccordionCollapse2">
+                /api/lol/{region}/v1.2/champion/{id}
+            </a>
+        </h3>
+    </div>
+    <div id="sampleAccordionCollapse2" class="panel-collapse collapse">
+        <div class="panel-body">
+            <b>RESPONSE CLASSES</b>
+            <br><br>
+            <b>Return value: ChampionDto</b>
+            <br><br>
+
+            <br><br>
+            <b>ChampionDto</b> - This object contains champion information.
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>NAME</th>
+                        <th>DATA TYPE</th>
+                        <th>DESCRIPTION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>rankedPlayEnabled</td>
+                        <td>boolean</td>
+                        <td>Ranked play enabled flag.</td>
+                    </tr>
+                    <tr>
+                        <td>botMmEnabled</td>
+                        <td>boolean</td>
+                        <td>Bot Match Made enabled flag (for Co-op vs. AI games).</td>
+                    </tr>
+                    <tr>
+                        <td>botEnabled</td>
+                        <td>boolean</td>
+                        <td>Bot enabled flag (for custom games).</td>
+                    </tr>
+                    <tr>
+                        <td>active</td>
+                        <td>boolean</td>
+                        <td>Indicates if the champion is active.</td>
+                    </tr>
+                    <tr>
+                        <td>freeToPlay</td>
+                        <td>boolean</td>
+                        <td>Indicates if the champion is free to play. Free to play champions are rotated periodically.</td>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>boolean</td>
+                        <td>Champion ID. For static information correlating to champion IDs, please refer to the LoL Static Data API.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br><br>
+            <b>RESPONSE ERRORS</b>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>HTTP STATUS CODE</th>
+                        <th>REASON</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>400</td>
+                        <td>Bad request</td>
+                    </tr>
+                    <tr>
+                        <td>500</td>
+                        <td>Internal server error</td>
+                    </tr>
+                    <tr>
+                        <td>429</td>
+                        <td>Rate limit exceeded</td>
+                    </tr>
+                    <tr>
+                        <td>503</td>
+                        <td>Service unavailable</td>
+                    </tr>
+                    <tr>
+                        <td>401</td>
+                        <td>Unauthorized</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br><br>
+            <b>QUERY PARAMETERS</b>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>NAME</th>
+                        <th>VALUE</th>
+                        <th>DATA TYPE</th>
+                        <th>DESCRIPTION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>id (optional)</td>
+                        <td></td>
+                        <td>int</td>
+                        <td>ID of the champion to retrieve.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</div>
